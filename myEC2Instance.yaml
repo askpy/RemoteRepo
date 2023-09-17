@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >
+  "Deploy a basic Ec2 Instance in a default VPC in the us-west-1"
+# https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html
+Resources:
+  myEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties: 
+      AvaialabilityZone: us-west-1a
+      ImageId: "ami-04cb4ca688797756f"
+      InstanceType: t2.micro
+      Tags:
+        - Key: "name"
+          Value: "AghoghoEc2"
